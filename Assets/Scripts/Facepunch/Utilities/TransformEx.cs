@@ -159,7 +159,7 @@ namespace UnityEngine
             var renderers = tx.GetComponentsInChildren<Renderer>();
             foreach (var r in renderers)
             {
-                if (r is ParticleRenderer) continue;
+              //  if (r is ParticleRenderer) continue; // Unity 2018.2 to 2018.3, ParticleRenderer has been removed. ParticleSystemRenderer is need to be used instead.
                 if (r is ParticleSystemRenderer) continue;
 
                 if (b.center == Vector3.zero)
